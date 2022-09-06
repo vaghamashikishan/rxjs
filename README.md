@@ -1,1 +1,1 @@
-It is my learning of rxjs
+This is my learning of rxjs
