@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { interval, Subscription } from 'rxjs';
+import { interval, Subscription, timer } from 'rxjs';
 import { DesignUtilityService } from 'src/app/_appServices/design-utility.service';
 
 @Component({
@@ -21,7 +21,8 @@ export class IntervalComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit(): void {
     let count = interval(1000);
-    // let count = timer(3000, 1000); (wait for 3 seconds to see the result)
+    // let count = timer(3000, 1000);
+    // (wait for 3 seconds to see the result)
 
     this.subscriptionVar = count.subscribe(res => {
       this.intervalMsg = res;

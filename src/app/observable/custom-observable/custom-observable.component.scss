@@ -1,0 +1,20 @@
+.list{
+  li{
+    background-color: #80808033;
+    border: 1px solid #80808033;
+    border-radius: 5px;
+    padding: 4px;
+    margin-bottom: 7px;
+  }
+  list-style: none;
+}
+
+.list.error li{
+    background-color: #ff000029;
+    border: 1px solid #ff000082;
+}
+
+.list.completed li{
+    background-color: #19875487;
+    border: 1px solid #19875482;
+}
