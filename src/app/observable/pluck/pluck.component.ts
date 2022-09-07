@@ -28,6 +28,4 @@ export class PluckComponent implements OnInit {
 
       })
   }
-
-
 }

@@ -14,6 +14,7 @@ import { ToArrayComponent } from './observable/to-array/to-array.component';
 import { CustomObservableComponent } from './observable/custom-observable/custom-observable.component';
 import { MapComponent } from './observable/map/map.component';
 import { PluckComponent } from './observable/pluck/pluck.component';
+import { FilterComponent } from './observable/filter/filter.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { PluckComponent } from './observable/pluck/pluck.component';
     CustomObservableComponent,
     MapComponent,
     PluckComponent,
+    FilterComponent,
   ],
   imports: [
     BrowserModule,
