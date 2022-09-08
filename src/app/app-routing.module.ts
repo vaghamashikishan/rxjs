@@ -11,6 +11,7 @@ import { OfFromComponent } from './observable/of-from/of-from.component';
 import { ToArrayComponent } from './observable/to-array/to-array.component';
 import { PromiseComponent } from './promise/promise.component';
 import { FilterComponent } from './observable/filter/filter.component';
+import { TakeComponent } from './observable/take/take.component';
 
 const routes: Routes = [
   { path: 'promise', component: PromiseComponent },
@@ -24,7 +25,8 @@ const routes: Routes = [
       { path: 'custom-observable', component: CustomObservableComponent },
       { path: 'map', component: MapComponent },
       { path: 'pluck', component: PluckComponent },
-      { path: 'filter', component: FilterComponent }
+      { path: 'filter', component: FilterComponent },
+      { path: 'take', component: TakeComponent }
     ]
   },
   { path: '**', redirectTo: 'promise' }
