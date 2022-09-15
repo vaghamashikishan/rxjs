@@ -17,6 +17,7 @@ import { PluckComponent } from './observable/pluck/pluck.component';
 import { FilterComponent } from './observable/filter/filter.component';
 import { TakeComponent } from './observable/take/take.component';
 import { DebounceDistinctComponent } from './observable/debounce-distinct/debounce-distinct.component';
+import { LoadingBarModule } from '@ngx-loading-bar/core';
 
 @NgModule({
   declarations: [
@@ -34,11 +35,12 @@ import { DebounceDistinctComponent } from './observable/debounce-distinct/deboun
     PluckComponent,
     FilterComponent,
     TakeComponent,
-    DebounceDistinctComponent,
+    DebounceDistinctComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    LoadingBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

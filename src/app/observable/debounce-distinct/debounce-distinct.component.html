@@ -1,11 +1,27 @@
 <div class="container">
-  <div class="card col-6">
-    <div class="card-header">
-      Debounce
+  <div class="row">
+    <ngx-loading-bar></ngx-loading-bar>
+    <div class="col-6">
+      <div class="card">
+        <div class="card-header">
+          Debounce
+        </div>
+        <div class="card-body">
+          <input type="text" class="form-control" #input1 placeholder="Search...">
+        </div>
+        <div class="p-3" *ngIf="data">{{data}}</div>
+      </div>
     </div>
-    <div class="card-body">
-      <input type="text" class="form-control" #input1 placeholder="Search...">
+    <div class="col-6">
+      <div class="card">
+        <div class="card-header">
+          Distinct Until Changed
+        </div>
+        <div class="card-body">
+          <input type="text" class="form-control" #input2 placeholder="Search...">
+        </div>
+        <div class="p-3" *ngIf="data2">{{data2}}</div>
+      </div>
     </div>
-    <div class="p-3" *ngIf="data">{{data}}</div>
   </div>
 </div>
