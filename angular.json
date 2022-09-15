@@ -99,6 +99,5 @@
         }
       }
     }
-  },
-  "defaultProject": "rxjs1"
+  }
 }
