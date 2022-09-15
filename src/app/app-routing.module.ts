@@ -12,6 +12,7 @@ import { ToArrayComponent } from './observable/to-array/to-array.component';
 import { PromiseComponent } from './promise/promise.component';
 import { FilterComponent } from './observable/filter/filter.component';
 import { TakeComponent } from './observable/take/take.component';
+import { DebounceDistinctComponent } from './observable/debounce-distinct/debounce-distinct.component';
 
 const routes: Routes = [
   { path: 'promise', component: PromiseComponent },
@@ -26,7 +27,8 @@ const routes: Routes = [
       { path: 'map', component: MapComponent },
       { path: 'pluck', component: PluckComponent },
       { path: 'filter', component: FilterComponent },
-      { path: 'take', component: TakeComponent }
+      { path: 'take', component: TakeComponent },
+      { path: 'debounce-distinct', component: DebounceDistinctComponent },
     ]
   },
   { path: '**', redirectTo: 'promise' }

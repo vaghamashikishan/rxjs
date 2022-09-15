@@ -16,6 +16,7 @@ import { MapComponent } from './observable/map/map.component';
 import { PluckComponent } from './observable/pluck/pluck.component';
 import { FilterComponent } from './observable/filter/filter.component';
 import { TakeComponent } from './observable/take/take.component';
+import { DebounceDistinctComponent } from './observable/debounce-distinct/debounce-distinct.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { TakeComponent } from './observable/take/take.component';
     PluckComponent,
     FilterComponent,
     TakeComponent,
+    DebounceDistinctComponent,
   ],
   imports: [
     BrowserModule,

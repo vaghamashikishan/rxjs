@@ -24,7 +24,5 @@ export class MapComponent implements OnInit {
           this.subscriptionVar.unsubscribe();
         }, 5000);
       })
-
   }
-
 }
