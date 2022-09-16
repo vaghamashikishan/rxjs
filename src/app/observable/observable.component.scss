@@ -1,3 +1,30 @@
 .title:hover{
   cursor: pointer;
 }
+
+.list{
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.list li{
+  display: block;
+  min-width: 300px;
+  max-width: 300px;
+  padding: 5rem 3rem;
+  margin: 1rem;
+  border: 1px solid rgb(36, 34, 34);
+  text-align: center;
+
+}
+.list li:hover{
+  transition: all 0.15s ease-in;
+  box-shadow:  10px 10px 10px 3px black;
+}
+
+.list li a{
+  color: inherit;
+  font-size: 2rem;
+  text-decoration: none;
+}

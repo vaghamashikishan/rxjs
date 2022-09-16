@@ -1,5 +1,43 @@
 <div class="my-4 mx-4">
   <h2 routerLink="/observable" class="title">Observable</h2>
-  <app-list-component></app-list-component>
-  <!-- <router-outlet></router-outlet> -->
+  <div class="row">
+    <div class="col-md-12">
+      <ul class="list">
+        <li class="li-a">
+          <a routerLink="/observable/from-event">from-event</a>
+        </li>
+        <li class="li-a">
+          <a routerLink="/observable/interval">Interval</a>
+        </li>
+        <li class="li-a">
+          <a routerLink="/observable/of-from">of-from</a>
+        </li>
+        <li class="li-a">
+          <a routerLink="/observable/toArray">toArray</a>
+        </li>
+        <li class="li-a">
+          <a routerLink="/observable/custom-observable">custom observable</a>
+        </li>
+        <li class="li-a">
+          <a routerLink="/observable/map">Map</a>
+        </li>
+        <li class="li-a">
+          <a routerLink="/observable/pluck">pluck</a>
+        </li>
+        <li class="li-a">
+          <a routerLink="/observable/filter">filter</a>
+        </li>
+        <li class="li-a">
+          <a routerLink="/observable/take">take & takeUntil</a>
+        </li>
+        <li class="li-a">
+          <a routerLink="/observable/debounce-distinct">Debounce & DistinctUntill</a>
+        </li>
+        <li class="li-a">
+          <a routerLink="/observable/subject">Subject & Behavior Subject</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <router-outlet></router-outlet>
 </div>

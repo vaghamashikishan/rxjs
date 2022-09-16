@@ -5,7 +5,6 @@ import { DebounceDistinctComponent } from './debounce-distinct/debounce-distinct
 import { FilterComponent } from './filter/filter.component';
 import { FromEventComponent } from './from-event/from-event.component';
 import { IntervalComponent } from './interval/interval.component';
-import { ListComponentComponent } from './list-component/list-component.component';
 import { MapComponent } from './map/map.component';
 import { ObservableComponent } from './observable.component';
 import { ObservableModule } from './observable.module';
@@ -17,25 +16,22 @@ import { ToArrayComponent } from './to-array/to-array.component';
 
 const routes: Routes = [
   {
-    path: '', component: ObservableComponent, children: [
-      {
-        path: 'list', component: ListComponentComponent, children: [
+    path: '', children: [
 
-          { path: 'from-event', component: FromEventComponent },
-          { path: 'interval', component: IntervalComponent },
-          { path: 'of-from', component: OfFromComponent },
-          { path: 'toArray', component: ToArrayComponent },
-          { path: 'custom-observable', component: CustomObservableComponent },
-          { path: 'map', component: MapComponent },
-          { path: 'pluck', component: PluckComponent },
-          { path: 'filter', component: FilterComponent },
-          { path: 'take', component: TakeComponent },
-          { path: 'debounce-distinct', component: DebounceDistinctComponent },
-          { path: 'subject', component: SubjectComponent },
-        ]
-      },
+      { path: '', component: ObservableComponent },
+      { path: 'from-event', component: FromEventComponent },
+      { path: 'interval', component: IntervalComponent },
+      { path: 'of-from', component: OfFromComponent },
+      { path: 'toArray', component: ToArrayComponent },
+      { path: 'custom-observable', component: CustomObservableComponent },
+      { path: 'map', component: MapComponent },
+      { path: 'pluck', component: PluckComponent },
+      { path: 'filter', component: FilterComponent },
+      { path: 'take', component: TakeComponent },
+      { path: 'debounce-distinct', component: DebounceDistinctComponent },
+      { path: 'subject', component: SubjectComponent },
     ]
-  },
+  }
 ];
 
 @NgModule({

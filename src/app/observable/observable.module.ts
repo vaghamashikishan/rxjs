@@ -8,7 +8,6 @@ import { DebounceDistinctComponent } from './debounce-distinct/debounce-distinct
 import { FilterComponent } from './filter/filter.component';
 import { FromEventComponent } from './from-event/from-event.component';
 import { IntervalComponent } from './interval/interval.component';
-import { ListComponentComponent } from './list-component/list-component.component';
 import { MapComponent } from './map/map.component';
 import { ObservableComponent } from './observable.component';
 import { OfFromComponent } from './of-from/of-from.component';
@@ -21,7 +20,6 @@ import { ToArrayComponent } from './to-array/to-array.component';
 @NgModule({
   declarations: [
     ObservableComponent,
-    ListComponentComponent,
     FromEventComponent,
     IntervalComponent,
     OfFromComponent,
