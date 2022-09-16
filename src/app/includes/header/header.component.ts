@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DesignUtilityService } from 'src/app/_appServices/design-utility.service';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  isHeaderText: boolean = false;
+  constructor(private _appService: DesignUtilityService) { }
 
   ngOnInit(): void {
+    this._appService.headerText.subscribe(res => {
+      this.isHeaderText = res;
+    })
   }
 
 }

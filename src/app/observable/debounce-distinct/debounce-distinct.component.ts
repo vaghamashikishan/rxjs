@@ -42,7 +42,7 @@ export class DebounceDistinctComponent implements OnInit, AfterViewInit {
     el2
       .pipe(
         map(event => event.target.value),
-        // debounceTime(1000),
+        debounceTime(1000),
         distinctUntilChanged()
       )
       .subscribe((res: any) => {

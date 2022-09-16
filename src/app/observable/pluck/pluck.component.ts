@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { Observable, from, pluck } from 'rxjs';
+import { DesignUtilityService } from 'src/app/_appServices/design-utility.service';
 
 @Component({
   selector: 'app-pluck',
@@ -8,7 +9,10 @@ import { Observable, from, pluck } from 'rxjs';
 })
 export class PluckComponent implements OnInit {
 
-  constructor() { }
+  _serviceInputText!: string;
+  @ViewChild('inputText') inputEl!: ElementRef;
+
+  constructor(private _appService: DesignUtilityService) { }
 
   ngOnInit(): void {
     const user = from([
@@ -27,5 +31,14 @@ export class PluckComponent implements OnInit {
         console.log(res);
 
       })
+
+    //For Behavior Subject example
+    this._appService.inputText.subscribe(res => this._serviceInputText = res);
+  }
+
+  onChangeName() {
+    this._serviceInputText = this.inputEl.nativeElement.value;
+    this._appService.inputText.next(this._serviceInputText);
+    this._appService.inputText.subscribe((res: any) => console.log(res));
   }
 }
