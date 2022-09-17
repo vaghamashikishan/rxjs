@@ -13,7 +13,6 @@ export class SubjectComponent implements OnInit {
     this._appService.inputText.subscribe((res: any) => {
       this._inputName = res
       console.log(this._inputName);
-
     });
   }
 
@@ -21,8 +20,7 @@ export class SubjectComponent implements OnInit {
     this._appService.headerText.next(true);
   }
 
-  // ngOnDestroy(): void {
-  //   this._appService.headerText.next(false);
-  // }
-
+  ngOnDestroy(): void {
+    this._appService.headerText.next(false);
+  }
 }

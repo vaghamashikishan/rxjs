@@ -1,15 +1,15 @@
-import { Component, OnInit } from '@angular/core';
-import { filter, from } from 'rxjs';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { filter, from, Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-filter',
   templateUrl: './filter.component.html',
   styleUrls: ['./filter.component.scss']
 })
-export class FilterComponent implements OnInit {
+export class FilterComponent implements OnInit, OnDestroy {
 
   constructor() { }
-
+  subscription1!: Subscription;
   user = [
     { id: 1, name: 'Kishan' },
     { id: 2, name: 'jay' },
@@ -22,11 +22,14 @@ export class FilterComponent implements OnInit {
 
   ngOnInit(): void {
     const userObservable = from(this.user);
-    userObservable
+    this.subscription1 = userObservable
       .pipe(filter(user => user.name.length > 5))
       .subscribe(res => {
         console.log(res);
       })
   }
 
+  ngOnDestroy(): void {
+    if (this.subscription1) this.subscription1.unsubscribe();
+  }
 }

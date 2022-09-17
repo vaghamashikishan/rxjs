@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { map, interval, Subscription } from 'rxjs';
 import { DesignUtilityService } from 'src/app/_appServices/design-utility.service';
 
@@ -7,7 +7,7 @@ import { DesignUtilityService } from 'src/app/_appServices/design-utility.servic
   templateUrl: './map.component.html',
   styleUrls: ['./map.component.scss']
 })
-export class MapComponent implements OnInit {
+export class MapComponent implements OnInit, OnDestroy {
 
   subscriptionVar!: Subscription;
   constructor(private _service: DesignUtilityService) { }
@@ -24,5 +24,8 @@ export class MapComponent implements OnInit {
           this.subscriptionVar.unsubscribe();
         }, 5000);
       })
+  }
+  ngOnDestroy(): void {
+    if (this.subscriptionVar) this.subscriptionVar.unsubscribe();
   }
 }
