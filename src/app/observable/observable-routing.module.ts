@@ -1,11 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { ConcatComponent } from './concat/concat.component';
 import { CustomObservableComponent } from './custom-observable/custom-observable.component';
 import { DebounceDistinctComponent } from './debounce-distinct/debounce-distinct.component';
 import { FilterComponent } from './filter/filter.component';
 import { FromEventComponent } from './from-event/from-event.component';
 import { IntervalComponent } from './interval/interval.component';
 import { MapComponent } from './map/map.component';
+import { MergeComponent } from './merge/merge.component';
 import { ObservableComponent } from './observable.component';
 import { ObservableModule } from './observable.module';
 import { OfFromComponent } from './of-from/of-from.component';
@@ -29,6 +31,8 @@ const routes: Routes = [
       { path: 'take', component: TakeComponent },
       { path: 'debounce-distinct', component: DebounceDistinctComponent },
       { path: 'subject', component: SubjectComponent },
+      { path: 'concat', component: ConcatComponent },
+      { path: 'merge', component: MergeComponent },
     ]
   }
 ];

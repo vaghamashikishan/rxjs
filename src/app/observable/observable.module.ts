@@ -15,6 +15,8 @@ import { PluckComponent } from './pluck/pluck.component';
 import { SubjectComponent } from './subject/subject.component';
 import { TakeComponent } from './take/take.component';
 import { ToArrayComponent } from './to-array/to-array.component';
+import { ConcatComponent } from './concat/concat.component';
+import { MergeComponent } from './merge/merge.component';
 
 
 @NgModule({
@@ -30,7 +32,9 @@ import { ToArrayComponent } from './to-array/to-array.component';
     FilterComponent,
     TakeComponent,
     DebounceDistinctComponent,
-    SubjectComponent
+    SubjectComponent,
+    ConcatComponent,
+    MergeComponent
   ],
   imports: [
     CommonModule,
