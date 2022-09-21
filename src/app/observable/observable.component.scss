@@ -21,6 +21,7 @@
 .list li:hover{
   transition: all 0.15s ease-in;
   box-shadow:  10px 10px 10px 3px black;
+  cursor: pointer;
 }
 
 .list li a{
