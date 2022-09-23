@@ -9,7 +9,6 @@ import { IntervalComponent } from './interval/interval.component';
 import { MapComponent } from './map/map.component';
 import { MergeComponent } from './merge/merge.component';
 import { ObservableComponent } from './observable.component';
-import { ObservableModule } from './observable.module';
 import { OfFromComponent } from './of-from/of-from.component';
 import { PluckComponent } from './pluck/pluck.component';
 import { SubjectComponent } from './subject/subject.component';
@@ -18,7 +17,7 @@ import { ToArrayComponent } from './to-array/to-array.component';
 
 const routes: Routes = [
   {
-    path: '', children: [
+    path: 'observable', children: [
       { path: '', component: ObservableComponent },
       { path: 'from-event', component: FromEventComponent },
       { path: 'interval', component: IntervalComponent },
