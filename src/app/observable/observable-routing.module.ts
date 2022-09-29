@@ -17,7 +17,7 @@ import { ToArrayComponent } from './to-array/to-array.component';
 
 const routes: Routes = [
   {
-    path: 'observable', children: [
+    path: '', children: [
       { path: '', component: ObservableComponent },
       { path: 'from-event', component: FromEventComponent },
       { path: 'interval', component: IntervalComponent },

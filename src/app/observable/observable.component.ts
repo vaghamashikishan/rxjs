@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, DoCheck, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-observable',
@@ -8,14 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class ObservableComponent implements OnInit {
 
   constructor() { }
-
-  ngOnInit(): void {
-    // If we click on li card -> a tag in li card will hit.
-    document.addEventListener('click', (e: any) => {
-      if (e.target.className === 'li-a') {
-        e.target.children[0].click();
-      }
-    });
-  }
+  ngOnInit(): void { }
 
 }
+

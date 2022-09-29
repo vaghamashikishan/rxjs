@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ObservableRoutingModule } from './observable/observable-routing.module';
-import { ObservableComponent } from './observable/observable.component';
 
 import { PromiseComponent } from './promise/promise.component';
 
@@ -15,9 +14,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes),
-    ObservableRoutingModule
-  ],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
